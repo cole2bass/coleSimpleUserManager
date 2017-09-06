@@ -34,6 +34,9 @@ app.post("/create", (req, res) => {
             if (users.length > 0) {
                 idSetter = users[users.length - 1].id + 1;
             }
+            else {
+                idSetter = 1;
+            }
             users.push({id: idSetter, user: req.body});
             idSetter++;
             let json = JSON.stringify(users);
