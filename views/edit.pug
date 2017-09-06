@@ -1,0 +1,13 @@
+extends layouts/default
+
+block headContent
+    link(rel= "stylesheet", href= "/styles/default.css")
+
+block content
+    div.title= "Edit " + user.username
+    div.form
+        form(method= "POST", action= "/edit/" + id)
+            +valForm("username", "Username: ", "text", user.username)
+            +valForm("age", "Age: ", "age", user.age)
+            +valForm("email", "Email: ", "email", user.email)
+            input(type= "submit", value= "Submit")

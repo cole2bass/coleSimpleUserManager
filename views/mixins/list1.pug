@@ -1,0 +1,10 @@
+mixin textForm(id, text, type)
+    div.formItemContainer
+        label(for= id)= text
+        input(id= id, name= id, type= type)
+
+
+mixin valForm(id, text, type, value)
+    div.formItemContainer
+        label(for= id)= text
+        input(id= id, name= id, type= type, value= value)

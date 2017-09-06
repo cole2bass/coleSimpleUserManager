@@ -1,0 +1,25 @@
+extends layouts/default
+
+block headContent
+    link(rel= "stylesheet", href= "./styles/list.css")
+
+block content
+    div.title User List
+    div.list
+        each user in list
+            div.user
+                div.id
+                    div.userLabel Id:
+                    div.value= user.id
+                div.username
+                    div.userLabel Username:
+                    div.value=  user.user.username
+                div.email
+                    div.userLabel Email:
+                    div.value=  user.user.email
+                div.age
+                    div.userLabel Age:
+                    div.value= user.user.age
+                a(href= "/edit/"+user.id) Edit User
+                a(href= "/delete/"+user.id) Delete User
+    a(href= "/create") Create Another User

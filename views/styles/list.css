@@ -1,0 +1,27 @@
+div.user {
+    background-color: white;
+    display: flex;
+    position: relative;
+    left: -15px;
+    width: 110%;
+    padding: 8px;
+}
+
+div.userLabel {
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+div.value {
+    margin-right: 20px;
+}
+
+div.username, div.email, div.id, div.age {
+    display: flex;
+    margin-right: 10px;
+}
+
+div.user>a {
+    margin-right: 10px;
+}
